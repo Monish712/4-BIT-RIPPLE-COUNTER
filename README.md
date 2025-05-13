@@ -1,4 +1,4 @@
-![Screenshot 2024-12-08 153011](https://github.com/user-attachments/assets/515ed47f-910b-49f6-be9f-e2aff57cc9da)# 4-BIT-RIPPLE-COUNTER
+# 4-BIT-RIPPLE-COUNTER
 
 **AIM:**
 
@@ -23,32 +23,48 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 ![image](https://github.com/naavaneetha/4-BIT-RIPPLE-COUNTER/assets/154305477/85e1958a-2fc1-49bb-9a9f-d58ccbf3663c)
 
 **Procedure**
-Type the program in Quartus software.
-Compile and run the program.
-Generate the RTL schematic and save the logic diagram.
-Create nodes for inputs and outputs to generate the timing diagram.
-For different input combinations generate the timing diagram.
-
 
 /* write all the steps invloved */
 
 **PROGRAM**
-![Screenshot 2024-12-08 153011](https://github.com/user-attachments/assets/419218b9-fe5c-4706-9dd5-b6eaae954277)
 
 
-/* Program for 4 Bit Ripple Counter and verify its truth table in quartus using Verilog programming.
+ Developed by: PAKANATI MONISH RegisterNumber: 212224240109
 
- Developed by: PAKANATI MONISH
- RegisterNumber:212224240109
-*/
+
+module Ex12(clk,rst,din,q);
+input clk,rst;
+input din;
+output reg [3:0]q;
+always @(posedge clk)
+begin
+q[0]<=din;
+q[1]<=q[0];
+q[2]<=q[1];
+q[3]<=q[2];
+end
+endmodule
+
+
+
+
 
 **RTL LOGIC FOR 4 Bit Ripple Counter**
-![Screenshot 2024-12-08 153028](https://github.com/user-attachments/assets/2e366ee4-f484-4c6b-9c1e-c576f25e10ff)
+
+
+![Screenshot 2025-05-12 092536](https://github.com/user-attachments/assets/11c168aa-7157-42fd-8f9b-b88392532a87)
+
 
 
 **TIMING DIGRAMS FOR 4 Bit Ripple Counter**
-![Screenshot 2024-12-08 153851](https://github.com/user-attachments/assets/6b6c83f4-cddf-4d18-97a1-45bb6e2d3a35)
+
+
+![Screenshot 2025-05-12 092712](https://github.com/user-attachments/assets/f8884a98-8ef2-4d9e-9b29-5618fe30abc8)
+
 
 
 **RESULTS**
- Thus implementing 4 Bit Ripple Counter using Verilog and validating their functionality using their functional tables is done successfully.
+
+
+Thus the program to implement a 4 Bit Ripple Counter using verilog and validating their functionality using their functional tables is successfully completed.
+
